@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<center><table border="1" width="80%" text-align="center">
+<tr>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Gender</th>
+  <th>Phone</th>
+</tr>
+{% for n in StdName %}
+<tr>
+  <td>{{ n.StdName }}</td>
+  <td>{{ n.StdAge }}</td>
+  <td>{{ n.StdGender }}</td>
+  <td>{{ n.StdPhone }}</td>
+</tr>
+{% else %}
+<tr>
+  <td>No Data</td>
+  <td>No Data</td>
+  <td>No Data</td>
+  <td>No Data</td>
+</tr>
+{% endfor %}
+</table></center>
+
+{% endblock %}
